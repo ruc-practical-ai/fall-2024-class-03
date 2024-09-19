@@ -1,13 +1,13 @@
-# echo "Installing http-server..."
+echo "Installing http-server..."
 
-# npm i -g http-server
+npm i -g http-server
 
-# if [ $? -eq 0 ]; then
-#     echo "http-server installed!"
-# else
-#     echo "Failed to install http-server."
-#     exit 1
-# fi
+if [ $? -eq 0 ]; then
+    echo "http-server installed!"
+else
+    echo "Failed to install http-server."
+    exit 1
+fi
 
 echo "Installing Poetry..."
 
@@ -31,17 +31,17 @@ else
     exit 1
 fi
 
-# echo "Installing repository..."
+echo "Installing repository..."
 
-# poetry install --with dev --no-root
+poetry install --with dev --no-root
 
-# if [ $? -eq 0 ]; then
-#     echo "Repository dependencies installed!"
-# else
-#     echo "Failed to install repository dependencies."
-#     exit 1
-# fi
+if [ $? -eq 0 ]; then
+    echo "Repository dependencies installed!"
+else
+    echo "Failed to install repository dependencies."
+    exit 1
+fi
 
-# echo "Success!"
+echo "Success!"
 
-# exit 0
+exit 0

@@ -17,6 +17,8 @@ scipy = "^1.14.1"
 pandas = "^2.2.2"
 scikit-learn = "^1.5.2"
 torch = "^2.4.1"
+seaborn = "^0.13.2"
+wordcloud = "^1.9.3"
 
 [tool.poetry.group.dev.dependencies]
 black = "^24.8.0"

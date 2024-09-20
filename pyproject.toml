@@ -14,6 +14,7 @@ notebook = "^7.2.2"
 ipython = "^8.27.0"
 ipympl = "^0.9.4"
 scipy = "^1.14.1"
+pandas = "^2.2.2"
 
 [tool.poetry.group.dev.dependencies]
 black = "^24.8.0"

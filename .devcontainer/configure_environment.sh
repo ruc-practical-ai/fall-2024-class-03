@@ -76,7 +76,3 @@ echo 'source $HOME/.bash_profile' >> $HOME/.bashrc
 echo "Success!"
 
 exit 0
-
-echo "Success!"
-
-exit 0

@@ -30,69 +30,29 @@ Start an http-server.
 bash ../scripts/start_server.sh
 ```
 
-### Dependencies for Local Installation
+### Use via Dev Container
 
-#### Reveal.js
+To use this repository via a Dev Container, be sure you have the Dev Containers extension installed, along with Docker Desktop and WSL 2 (Windows only). Clone the repository, open VS Code in the repository root, and click the button shown in the pop up in the bottom-right corner to open in the Dev Container.
 
-This project is built on [reveal.js](https://revealjs.com/). All reveal.js dependencies are included in the repository. The repository itself is a modified [basic setup](https://revealjs.com/installation/#basic-setup) of reveal.js.
-
-#### Poetry
-
-This project is built on Python 3.12. Poetry is required for installation. To install Poetry, view the instructions [here](https://python-poetry.org/docs/).
-
-In codespaces, Poetry installation is handled in the development container. The user does not need to install Poetry if working in codespaces.
-
-#### TexLive
-
-This project also requires TexLive to render math fonts. Texlive can be installed via the following commands.
-
-```bash
-sudo apt-get -y update
-sudo apt-get -y install texlive
-sudo apt-get -y install dvipng texlive-latex-extra texlive-fonts-recommended cm-super
-```
-
-In codespaces, TexLive installation is also handled in the development container. The user does not need to install these packages if working in codespaces.
+If the popup doesn't show type `Cmd` / `Ctrl` + `Shift` + `P` &rarr; `Reopen in Container` (if the container is already built) or `Cmd` / `Ctrl` + `Shift` + `P` &rarr; `Build and Open in Container` if the container is not yet built.
 
 ### Local Installation
 
-To install locally, first install the required dependencies (Poetry and TexLive), then clone the repository and navigate to its directory.
+The dependencies required for local installation can be found in `.devcontainer/Dockerfile` and `.devcontainer/configure_environment.sh`.
 
-```bash
-git clone https://github.com/ruc-practical-ai/example-reveal-js-presentation.git
-cd example-reveal-js-presentation
-```
+For local installation, perform set up and install dependencies in the order they appear in the Dockerfile and the configuration script, starting with the Dockerfile.
+
+Final setup commands can be found in `.devcontainer/post_attach.sh`.
+
+Note that setup will be different depending on the local OS.
 
 #### Viewing HTML Pages Directly in a Browser from Local Installation
 
 To view HTML pages directly in a browser, simply navigate to the pages of interest and open them with a preferred web browser.
 
-#### Installing Python Dependencies Locally
+#### Selecting the Correct Python Interpreter
 
-To install locally, first install the required dependencies (Poetry and TexLive), then clone the repository and navigate to its directory.
-
-```bash
-git clone https://github.com/ruc-practical-ai/fall-2024-class-03.git
-cd fall-2024-class-03
-```
-
-Configure Poetry to install its virtual environment inside the repository directory.
-
-```bash
-poetry config virtualenvs.in-project true
-```
-
-Install the repository's Python dependencies.
-
-```bash
-poetry install --no-root
-```
-
-Check where Poetry built the virtual environment with the following command.
-
-```bash
-poetry env info --path
-```
+If the correct Python interpreter is not selected by default, select it manually in VS Code.
 
 Open the command pallette with `Ctrl` + `Shift` + `P` and type `Python: Select Interpreter`.
 
